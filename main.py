@@ -25,7 +25,6 @@ thirty_days_ago = today - datetime.timedelta(days=30)
 
 # get all the closed issues
 issues = [issue for repoName in repositories for issue in fetch_issues(orgName=ORG, repoName=repoName, startDate=thirty_days_ago, TOKEN=GITHUB_PA_TOKEN)]
-print(issues)
 
 # set up prompts for chatGPT
 system_description = """You are a product assistant tasked with writing reports about technical the Exein
